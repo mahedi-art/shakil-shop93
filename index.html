@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Amader Shop</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #14213d;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background-color: #1f2937;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        nav a:hover {
+            color: orange;
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 30px;
+        }
+
+        .product {
+            width: 210px;
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 12px;
+
+            box-shadow: 0px 3px 10px #cccccc;
+        }
+
+        .product-image {
+            height: 130px;
+            background-color: #f1f5f9;
+            border-radius: 10px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 75px;
+        }
+
+        .product h2 {
+            font-size: 20px;
+        }
+
+        .price {
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+
+            padding: 10px 20px;
+            border-radius: 6px;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e68900;
+        }
+
+        footer {
+            margin-top: 30px;
+            background-color: #14213d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🛒 Amader Shop</h1>
+        <p>Your Trusted Electronics Shop</p>
+    </header>
+
+
+    <!-- Navigation -->
+    <nav>
+        #Home</a>
+        #productsProducts</a>
+        #contactContact</a>
+        #🛒 Cart</a>
+    </nav>
+
+
+    <h1 class="title">Our Products</h1>
+
+
+    <!-- Products -->
+    <section class="products" id="products">
+
+        <!-- Watch -->
+        <div class="product">
+
+            <div class="product-image">
+                ⌚
+            </div>
+
+            <h2>Smart Watch</h2>
+
+            <p>Modern Smart Watch</p>
+
+            <p class="price">€39.99</p>
+
+            <button onclick="addToCart('Smart Watch')">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- Fan -->
+        <div class="product">
+
+            <div class="product-image">
+                🌀
+            </div>
+
+            <h2>Electric Fan</h2>
+
+            <p>Powerful Electric Fan</p>
+
+            <p class="price">€49.99</p>
+
+            <button onclick="addToCart('Electric Fan')">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- AC -->
+        <div class="product">
+
+            <div class="product-image">
+                ❄️
+            </div>
+
+            <h2>Air Conditioner</h2>
+
+            <p>Energy Saving AC</p>
+
+            <p class="price">€499.99</p>
+
+            <button onclick="addToCart('Air Conditioner')">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- Fridge -->
+        <div class="product">
+
+            <div class="product-image">
+                🧊
+            </div>
+
+            <h2>Refrigerator</h2>
+
+            <p>Modern Refrigerator</p>
+
+            <p class="price">€599.99</p>
+
+            <button onclick="addToCart('Refrigerator')">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- Monitor -->
+        <div class="product">
+
+            <div class="product-image">
+                🖥️
+            </div>
+
+            <h2>Monitor</h2>
+
+            <p>24 Inch Full HD Monitor</p>
+
+            <p class="price">€149.99</p>
+
+            <button onclick="addToCart('Monitor')">
+                Add to Cart
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <footer id="contact">
+
+        <h2>Amader Shop</h2>
+
+        <p>Email: info@amadershop.com</p>
+
+        <p>© 2026 Amader Shop</p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        function addToCart(productName) {
+
+            alert(productName + " added to cart! 🛒");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
