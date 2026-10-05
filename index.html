@@ -8,77 +8,105 @@
     <title>Shakil's Shop</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
+            font-family: Arial, sans-serif;
             background-color: #f4f4f4;
         }
 
+        /* Header */
         header {
             background-color: #14213d;
             color: white;
             text-align: center;
-            padding: 25px;
+            padding: 35px 20px;
         }
 
+        header h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 20px;
+        }
+
+        /* Navigation */
         nav {
             background-color: #1f2937;
             text-align: center;
-            padding: 15px;
+            padding: 18px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 15px;
+            margin: 0 20px;
+            font-size: 18px;
         }
 
         nav a:hover {
-            color: orange;
+            color: #ff9800;
         }
 
+        /* Title */
         .title {
             text-align: center;
-            margin-top: 35px;
+            margin-top: 40px;
+            font-size: 38px;
         }
 
+        /* Products */
         .products {
             display: flex;
             justify-content: center;
-            gap: 20px;
             flex-wrap: wrap;
-            padding: 30px;
+            gap: 25px;
+            padding: 40px 20px;
         }
 
         .product {
-            width: 210px;
             background-color: white;
-            text-align: center;
+            width: 250px;
             padding: 20px;
-            border-radius: 12px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #cccccc;
+            transition: 0.3s;
+        }
 
-            box-shadow: 0px 3px 10px #cccccc;
+        .product:hover {
+            transform: translateY(-5px);
         }
 
         .product-image {
-            height: 130px;
-            background-color: #f1f5f9;
-            border-radius: 10px;
+            height: 180px;
+            background-color: #eef2f7;
+            border-radius: 12px;
 
             display: flex;
             justify-content: center;
             align-items: center;
 
-            font-size: 75px;
+            font-size: 90px;
         }
 
         .product h2 {
-            font-size: 20px;
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            color: #555;
         }
 
         .price {
-            color: green;
-            font-size: 20px;
+            color: #16803c;
+            font-size: 24px;
             font-weight: bold;
         }
 
@@ -86,24 +114,46 @@
             background-color: #ff9800;
             color: white;
             border: none;
-
-            padding: 10px 20px;
-            border-radius: 6px;
-
+            padding: 12px 22px;
+            border-radius: 7px;
             cursor: pointer;
+            font-size: 16px;
         }
 
         button:hover {
             background-color: #e68900;
         }
 
+        /* Contact/Footer */
         footer {
-            margin-top: 30px;
+            margin-top: 40px;
             background-color: #14213d;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 35px 20px;
         }
+
+        footer h2 {
+            font-size: 28px;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 35px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            .product {
+                width: 90%;
+            }
+        }
+
     </style>
 </head>
 
@@ -111,7 +161,7 @@
 <body>
 
     <!-- Header -->
-    <header>
+    <header id="home">
         <h1>🛒 Shakil's Shop</h1>
         <p>Your Trusted Electronics Shop</p>
     </header>
@@ -119,20 +169,20 @@
 
     <!-- Navigation -->
     <nav>
-        #Home</a>
+        #homeHome</a>
         #productsProducts</a>
         #contactContact</a>
-        #🛒 Cart</a>
+        #products🛒 Shop</a>
     </nav>
 
 
+    <!-- Products -->
     <h1 class="title">Our Products</h1>
 
-
-    <!-- Products -->
     <section class="products" id="products">
 
-        <!-- Watch -->
+
+        <!-- Smart Watch -->
         <div class="product">
 
             <div class="product-image">
@@ -141,9 +191,13 @@
 
             <h2>Smart Watch</h2>
 
-            <p>Modern Smart Watch</p>
+            <p class="description">
+                Modern Smart Watch
+            </p>
 
-            <p class="price">€39.99</p>
+            <p class="price">
+                €39.99
+            </p>
 
             <button onclick="addToCart('Smart Watch')">
                 Add to Cart
@@ -161,9 +215,13 @@
 
             <h2>Electric Fan</h2>
 
-            <p>Powerful Electric Fan</p>
+            <p class="description">
+                Powerful Electric Fan
+            </p>
 
-            <p class="price">€49.99</p>
+            <p class="price">
+                €49.99
+            </p>
 
             <button onclick="addToCart('Electric Fan')">
                 Add to Cart
@@ -181,9 +239,13 @@
 
             <h2>Air Conditioner</h2>
 
-            <p>Energy Saving AC</p>
+            <p class="description">
+                Energy Saving AC
+            </p>
 
-            <p class="price">€499.99</p>
+            <p class="price">
+                €499.99
+            </p>
 
             <button onclick="addToCart('Air Conditioner')">
                 Add to Cart
@@ -201,62 +263,4 @@
 
             <h2>Refrigerator</h2>
 
-            <p>Modern Refrigerator</p>
-
-            <p class="price">€599.99</p>
-
-            <button onclick="addToCart('Refrigerator')">
-                Add to Cart
-            </button>
-
-        </div>
-
-
-        <!-- Monitor -->
-        <div class="product">
-
-            <div class="product-image">
-                🖥️
-            </div>
-
-            <h2>Monitor</h2>
-
-            <p>24 Inch Full HD Monitor</p>
-
-            <p class="price">€149.99</p>
-
-            <button onclick="addToCart('Monitor')">
-                Add to Cart
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- Contact -->
-    <footer id="contact">
-
-        <h2>Shakil's Shop</h2>
-
-        <p>Email: info@Shakil's Shopshop.com</p>
-
-        <p>© 2026 Shakil's Shop</p>
-
-    </footer>
-
-
-    <!-- JavaScript -->
-    <script>
-
-        function addToCart(productName) {
-
-            alert(productName + " added to cart! 🛒");
-
-        }
-
-    </script>
-
-</body>
-
-</html>
+   
